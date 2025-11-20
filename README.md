@@ -20,8 +20,8 @@ It is lightweight, extendable, and ideal for beginners exploring Java backend de
 
 - **Java**
 - **Maven**
-- **(Spring Boot)** 
-- **(MongoDB)**
+- **Spring Boot** 
+- **MongoDB**
 
 ## 🚀 Getting Started
 
