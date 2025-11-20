@@ -4,7 +4,7 @@ A simple job listing application built in Java (Maven) that allows users to view
 
 ## 📌 Overview
 
-This project provides a basic framework for a job-listing platform where users can browse, add, update, and delete job listings.  
+This project provides a basic framework for a job-listing platform where users can browse, add & search listings.  
 It is lightweight, extendable, and ideal for beginners exploring Java backend development.
 
 ## ✨ Features
@@ -20,8 +20,8 @@ It is lightweight, extendable, and ideal for beginners exploring Java backend de
 
 - **Java**
 - **Maven**
-- **(Optional)** Spring Boot or other frameworks (update if used)
-- **(Optional)** Database such as H2/MySQL (update if used)
+- **(Spring Boot)** 
+- **(MongoDB)**
 
 ## 🚀 Getting Started
 
