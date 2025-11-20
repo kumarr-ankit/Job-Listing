@@ -2,13 +2,11 @@ package com.ankit.JobListing.controller;
 
 import com.ankit.JobListing.model.Post;
 import com.ankit.JobListing.repository.PostRepo;
+import com.ankit.JobListing.repository.SearchJob;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.net.http.HttpRequest;
@@ -19,6 +17,8 @@ public class PostController {
 
     @Autowired
     PostRepo repo;
+    @Autowired
+    SearchJob searchJob = new SearchJob();
     @RequestMapping(value = "/")
     public void redirect(HttpServletResponse response) throws IOException {
 
@@ -29,4 +29,15 @@ public class PostController {
     public List<Post> getAllPost(){
      return repo.findAll();
     }
+
+    @PostMapping("/post")
+    public Post addPost(@RequestBody Post body){
+      return  repo.save(body);
+    }
+
+    @GetMapping(value = "/search/{text}")
+    public List<Post> getAllFilter(@PathVariable("text") String search){
+        return searchJob.findByText(search);
+    }
+
 }
