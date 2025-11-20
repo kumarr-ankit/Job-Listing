@@ -78,8 +78,7 @@ Job-Listing/
 ## 📘 Usage
 
 - Browse job listings
-- Add/Edit/Delete job posts
-- Extend with authentication, filtering, or a frontend UI
+- Add/Search job posts
 
 ---
 
